@@ -17,14 +17,18 @@ function AllSpots() {
   if (!spots) {
     return null;
   }
-//   let allSpotsArr = Object.values(spots);
+  
   return (
-    <div className="all-spots-wrapper">
-      <div className="all-spots-container">
-        <div className="all-spots"></div>
-      </div>
+    <div> 
+        {spots && spots.map((spot) => (
+            <div
+                key={spot.id}
+            >
+                <p>{spot.name}</p>
+        </div>  
+        ))}
     </div>
-  );
+    )
 }
 
 export default AllSpots;

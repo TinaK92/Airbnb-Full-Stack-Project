@@ -5,6 +5,7 @@ import Navigation from './components/Navigation/Navigation.jsx';
 import * as sessionActions from './store/session';
 import AllSpots from './components/AllSpots/AllSpots.jsx';
 
+
 function Layout() {
   const dispatch = useDispatch();
   const [isLoaded, setIsLoaded] = useState(false);

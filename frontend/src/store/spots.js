@@ -1,10 +1,7 @@
-// import { csrfFetch } from "./csrf";
+import { csrfFetch } from "./csrf";
 
 const ALL_SPOTS = "spots/ALL_SPOTS";
 const CLEAR_SPOT_STATE = "spots/CLEAR_SPOT_STATE";
-
-
-
 
 // Actions
 // Get all spots 
@@ -23,9 +20,12 @@ export const clearSpotState = () => {
 // Thunks 
 // Get all spots THUNK
 export const getAllSpots = () => async (dispatch) => {
+    console.log("YOUR ABOUT TO GO OUT THE WINDOW")
     const response = await fetch('/api/spots');
+    console.log('=========> Response', response)
     if (response.ok) {
         const payload = await response.json();
+        console.log('===========> Payload', payload)
         dispatch(allSpots(payload));
     }
 };
