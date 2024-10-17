@@ -171,19 +171,8 @@ module.exports = {
   async down(queryInterface, Sequelize) {
     options.tableName = "Spots";
     const Op = Sequelize.Op;
-    await Spot.bulkDelete(options, {
-      name: { [Op.in]: [
-        "Poseidon's Palace", 
-        "Seahorse Sanctuary", 
-        "Jellyfish Jungle", 
-        "Shark's Cove",
-        "Whale Watch Retreat",
-        "Starfish Sanctuary",
-        "Octopus Hideaway",
-        "Manta Ray Manor",
-        "Dolphin Dive",
-        "Kraken's Lair",
-      ] },
+    return queryInterface.bulkDelete(options, {
+      ownerId: { [Op.in]: [1, 2, 3] },
     });
   },
 };
