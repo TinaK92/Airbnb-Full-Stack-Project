@@ -328,10 +328,12 @@ router.get('/:spotId', async (req, res) => {
             },
             {
                 model: SpotImage,
+                as: 'SpotImages',
                 attributes: ["id", "url", "preview"],
             },
             {
                 model: Review,
+                as: 'Reviews',
                 attributes: ["stars"],
             },
         ],
@@ -392,7 +394,7 @@ router.get('/:spotId', async (req, res) => {
 
 
 // Get all spots 
-router.get('/', validateQueryParams, async (req, res) => {
+router.get('/', validateQueryParams, async (req, res, next) => {
     let { minLat, maxLat, minLng, maxLng, minPrice, maxPrice } = req.query;
     const page = req.query.page ?? 1;
     const size = req.query.size ?? 20;
@@ -446,10 +448,12 @@ router.get('/', validateQueryParams, async (req, res) => {
           include: [
             {
               model: Review,
+              as: 'Reviews',
               attributes: ["stars"],
             },
             {
               model: SpotImage,
+              as: 'SpotImages',
               attributes: ["url", "preview"],
               required: false,
             },

@@ -17,12 +17,14 @@ module.exports = (sequelize, DataTypes) => {
       // Spot has many Reviews
       Spot.hasMany(models.Review, {
         foreignKey: 'spotId', 
+        as: 'Reviews',
         onDelete: 'CASCADE',
         hooks: true,
       });
       // Spot has many Spot Images
       Spot.hasMany(models.SpotImage, {
         foreignKey: 'spotId',
+        as: 'SpotImages',
         onDelete: 'CASCADE',
         hooks: true,
       });
