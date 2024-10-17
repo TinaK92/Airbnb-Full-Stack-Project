@@ -18,16 +18,16 @@ const validateSpot = [
     body("country")
       .exists({ checkFalsy: true })
       .withMessage("Country is required"), // 400
-    body("lat")
-      .exists({ checkFalsy: true })
-      .isFloat({ min: -90, max: 90 })
-      .withMessage("Latitude must be within -90 and 90")
-      .toFloat(),
-    body("lng")
-      .exists({ checkFalsy: true })
-      .isFloat({ min: -180, max: 180 })
-      .withMessage("Longitude must be within -180 and 180")
-      .toFloat(),
+    // body("lat")
+    //   .exists({ checkFalsy: true })
+    //   .isFloat({ min: -90, max: 90 })
+    //   .withMessage("Latitude must be within -90 and 90")
+    //   .toFloat(),
+    // body("lng")
+    //   .exists({ checkFalsy: true })
+    //   .isFloat({ min: -180, max: 180 })
+    //   .withMessage("Longitude must be within -180 and 180")
+    //   .toFloat(),
     body("name")
       .exists({ checkFalsy: true })
       .isLength({ max: 50 })
