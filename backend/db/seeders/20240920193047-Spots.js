@@ -26,7 +26,7 @@ module.exports = {
             "A grand underwater palace with coral pillars and seaweed curtains, fit for ocean royalty.",
           price: 400,
           avgRating: 4.9,
-          previewImage: "frontend/Images/House1/kitchen 12.png",
+          previewImage: "/Images/House1/kitchen 12.png",
         },
         {
           ownerId: 2,
@@ -41,7 +41,7 @@ module.exports = {
             "An intimate retreat where you can swim with seahorses and relax in tranquility.",
           price: 220,
           avgRating: 4.7,
-          previewImage: "frontend/Images/House2/House2.jpg",
+          previewImage: "/Images/House2/House2.jpg",
         },
         {
           ownerId: 3,
@@ -56,7 +56,7 @@ module.exports = {
             "A magical home surrounded by gentle, glowing jellyfish, offering an otherworldly experience.",
           price: 300,
           avgRating: 4.8,
-          previewImage: "frontend/Images/House3/dinning room 5.png'",
+          previewImage: "/Images/House3/dinning room 5.png'",
         },
         {
           ownerId: 1,
@@ -71,7 +71,7 @@ module.exports = {
             "Stay safely in an enclosed underwater cove while observing majestic sharks in their natural habitat.",
           price: 350,
           avgRating: 4.6,
-          previewImage: "frontend/Images/House4/livingroom 2.png",
+          previewImage: "/Images/House4/livingroom 2.png",
         },
         {
           ownerId: 2,
@@ -86,7 +86,7 @@ module.exports = {
             "A peaceful underwater house where you can watch whales swim by your window in a serene icy environment.",
           price: 275,
           avgRating: 4.9,
-          previewImage: "frontend/Images/House5/kitchen 15.png",
+          previewImage: "/Images/House5/kitchen 15.png",
         },
         {
           ownerId: 3,
@@ -101,7 +101,7 @@ module.exports = {
             "Immerse yourself in a colorful world of starfish and coral, perfect for an oceanic getaway.",
           price: 250,
           avgRating: 4.7,
-          previewImage: "frontend/Images/House6/library.png",
+          previewImage: "/Images/House6/library.png",
         },
         {
           ownerId: 1,
@@ -116,7 +116,7 @@ module.exports = {
             "Live among the intelligent octopus in this cozy and fascinating underwater sanctuary.",
           price: 290,
           avgRating: 4.5,
-          previewImage: "frontend/Images/House7/closet 2.png",
+          previewImage: "/Images/House7/closet 2.png",
         },
         {
           ownerId: 2,
@@ -131,7 +131,7 @@ module.exports = {
             "Glide through clear waters alongside graceful manta rays in this luxurious underwater home.",
           price: 500,
           avgRating: 5.0,
-          previewImage: "frontend/Images/House8/livingroom.png",
+          previewImage: "/Images/House8/livingroom.png",
         },
         {
           ownerId: 3,
@@ -146,7 +146,7 @@ module.exports = {
             "Dive into the world of playful dolphins at this vibrant underwater home.",
           price: 320,
           avgRating: 4.8,
-          previewImage: "frontend/Images/House9/kids room 1.png",
+          previewImage: "/Images/House9/kids room 1.png",
         },
         {
           ownerId: 1,
@@ -161,7 +161,7 @@ module.exports = {
             "An adventurous home for those brave enough to stay near the legendary Kraken’s domain.",
           price: 450,
           avgRating: 4.7,
-          previewImage: "frontend/Images/House10/pool.png",
+          previewImage: "/Images/House10/pool.png",
         },
       ],
       { validate: true }
