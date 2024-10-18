@@ -16,6 +16,11 @@ module.exports = {
       [ 
         {
           spotId: 1,
+          url: '/Images/House1/kitchen 12.png',
+          preview: true,
+        },
+        {
+          spotId: 1,
           url: '/Images/House1/house1.png',
           preview: false,
         },
@@ -23,11 +28,6 @@ module.exports = {
           spotId: 1,
           url: '/Images/House1/bedroom 4.png',
           preview: false,
-        },
-        {
-          spotId: 1,
-          url: '/Images/House1/kitchen 12.png',
-          preview: true,
         },
         {
           spotId: 1,
@@ -41,13 +41,13 @@ module.exports = {
         },
         {
           spotId: 2,
-          url: '/Images/House2/bathroom 1.png',
-          preview: false,
+          url: '/Images/House2/House2.jpg',
+          preview: true,
         },
         {
           spotId: 2,
-          url: '/Images/House2/House2.jpg',
-          preview: true,
+          url: '/Images/House2/bathroom 1.png',
+          preview: false,
         },
         {
           spotId: 2,
@@ -66,6 +66,11 @@ module.exports = {
         },
         {
           spotId: 3,
+          url: '/Images/House3/dinning room 5.png',
+          preview: true,
+        },
+        {
+          spotId: 3,
           url: '/Images/House3/bathrooom 6.png',
           preview: false,
         },
@@ -73,11 +78,6 @@ module.exports = {
           spotId: 3,
           url: '/Images/House3/Bedroom.png',
           preview: false,
-        },
-        {
-          spotId: 3,
-          url: '/Images/House3/dinning room 5.png',
-          preview: true,
         },
         {
           spotId: 3, 
@@ -88,6 +88,11 @@ module.exports = {
           spotId: 3,
           url: '/Images/House3/kitchen 7.png',
           preview: false,
+        },
+        {
+          spotId: 4,
+          url: '/Images/House4/livingroom 2.png',
+          preview: true,
         },
         {
           spotId: 4,
@@ -106,13 +111,13 @@ module.exports = {
         },
         {
           spotId: 4,
-          url: '/Images/House4/livingroom 2.png',
-          preview: true,
-        },
-        {
-          spotId: 4,
           url: '/Images/House4/office.png',
           preview: false,
+        },
+        {
+          spotId: 5,
+          url: '/Images/House5/kitchen 15.png',
+          preview: true,
         },
         {
           spotId: 5,
@@ -131,13 +136,13 @@ module.exports = {
         },
         {
           spotId: 5,
-          url: '/Images/House5/kitchen 15.png',
-          preview: true,
-        },
-        {
-          spotId: 5,
           url: '/Images/House5/livingroom6.png',
           preview: false,
+        },
+        {
+          spotId: 6,
+          url: '/Images/House6/library.png',
+          preview: true,
         },
         {
           spotId: 6,
@@ -156,23 +161,18 @@ module.exports = {
         },
         {
           spotId: 6,
-          url: '/Images/House6/library.png',
-          preview: true,
-        },
-        {
-          spotId: 6,
           url: '/Images/House6/livingroom 11.png',
-          preview: false,
-        },
-        {
-          spotId: 7,
-          url: '/Images/House7/bathroom.png',
           preview: false,
         },
         {
           spotId: 7,
           url: '/Images/House7/closet 2.png',
           preview: true,
+        },
+        {
+          spotId: 7,
+          url: '/Images/House7/bathroom.png',
+          preview: false,
         },
         {
           spotId: 7,
@@ -191,6 +191,11 @@ module.exports = {
         },
         {
           spotId: 8,
+          url: '/Images/House8/livingroom.png',
+          preview: true,
+        },
+        {
+          spotId: 8,
           url: '/Images/House8/bedroom.png',
           preview: false,
         },
@@ -206,13 +211,13 @@ module.exports = {
         },
         {
           spotId: 8,
-          url: '/Images/House8/livingroom.png',
-          preview: true,
-        },
-        {
-          spotId: 8,
           url: '/Images/House8/office 1.png',
           preview: false,
+        },
+        {
+          spotId: 9,
+          url: '/Images/House9/kids room 1.png',
+          preview: true, 
         },
         {
           spotId: 9,
@@ -226,11 +231,6 @@ module.exports = {
         },
         {
           spotId: 9,
-          url: '/Images/House9/kids room 1.png',
-          preview: true, 
-        },
-        {
-          spotId: 9,
           url: '/Images/House9/kitcehn 4.png',
           preview: false,
         },
@@ -238,6 +238,11 @@ module.exports = {
           spotId: 9,
           url: '/Images/House9/livingroom 1.png',
           preview: false,
+        },
+        {
+          spotId: 10,
+          url: '/Images/House10/pool.png',
+          preview: true,
         },
         {
           spotId: 10,
@@ -258,11 +263,6 @@ module.exports = {
           spotId: 10,
           url: '/Images/House10/livingroom 3.png',
           preview: false,
-        },
-        {
-          spotId: 10,
-          url: '/Images/House10/pool.png',
-          preview: true,
         },
       ],
       {validate: true}
