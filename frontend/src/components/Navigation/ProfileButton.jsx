@@ -4,12 +4,12 @@ import { useState, useEffect, useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import { FaUserCircle } from 'react-icons/fa';
 import * as sessionActions from '../../store/session';
-import OpenModalButton from '../OpenModalButton/OpenModalButton.jsx';
 import LoginFormModal from '../LoginFormModal/LoginFormModal.jsx';
 import SignupFormModal from '../SignupFormModal/SignupFormModal.jsx';
 import OpenModalMenuItem from './OpenModalMenuItem.jsx';
 import { useNavigate } from 'react-router-dom';
 import '../Navigation/ProfileButton.css';
+import { GiHamburgerMenu } from 'react-icons/gi';
 
 function ProfileButton({ user }) {
   const navigate = useNavigate();
@@ -51,7 +51,8 @@ function ProfileButton({ user }) {
         className='profile-button'
         onClick={toggleMenu}
       >
-        <FaUserCircle />
+        <GiHamburgerMenu className="menu-button-icon" size={20} />
+        <FaUserCircle className="profile-button-icon"size={18} />
       </button>
       <ul 
         className={ulClassName} 

@@ -92,7 +92,7 @@ export const getUserSpots = () => async (dispatch) => {
 }
 
 // Create a new spot THUNK
-export const createNewSpot = (spot, navigate) => async (dispatch) => {
+export const createNewSpot = (spot, navigate) => async () => {
     const response = await csrfFetch(`/api/spots`, {
         method: "POST",
         // headers: {

@@ -46,6 +46,7 @@ const ManageSpots = () => {
                         <button 
                             to='/spots/new'
                             className="create-new-spot-button"
+                            onClick={() => navigate('/spots/new')}
                         >
                             Create a New Spot
                         </button>

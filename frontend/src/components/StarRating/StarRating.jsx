@@ -20,6 +20,7 @@ const StarRating = ({ rating, setRating }) => {
                             className="star"
                             size={30}
                             onMouseEnter={setHover(ratingVal)}
+                            color={ratingVal <= (hover || rating) ? '#ffc107' : '#e4e5e9'}
                             onMouseLeave={() => setHover(0)}
                         />
                     </label>

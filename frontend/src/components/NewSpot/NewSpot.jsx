@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 import { createNewSpot } from "../../store/spots";
 import { addImageToSpot } from "../../store/spots";
+import './NewSpot.css';
 
 export const NewSpot = () => {
     const dispatch = useDispatch();
