@@ -1,0 +1,42 @@
+
+
+:root {
+    /* Fonts */
+    --ff-primary: Arial, Helvetica, sans-serif;
+    --ff-headers: Georgia, 'Times New Roman', Times, serif;
+
+    /* Font size */
+    --fs-small: 16px;
+    --fs-medium: 26px;
+    --fs-large: 48px;
+    --fs-x_large: 60px;
+
+    /* Colors */
+    --white-cir: white;
+    --black-cir: black;
+
+}
+
+h1 {
+    margin: 0;
+    font-family: var(--ff-headers);
+    font-size: var(--fs-x_large);
+}
+
+h2 {
+    margin: 0;
+    font-family: var(--ff-headers);
+    font-size: var(--fs-large);
+}
+
+h3 {
+    margin: 0;
+    font-family: var(--ff-headers);
+    font-size: var(--fs-medium);
+}
+
+p {
+    margin: 0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-small);
+}

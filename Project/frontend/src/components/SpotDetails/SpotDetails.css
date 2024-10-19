@@ -1,0 +1,118 @@
+@import url('../../index.css');
+
+.spot-details-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 1rem,
+}
+
+.city-state-country {
+	padding-left: 10px;
+}
+
+.spot-details-title {
+    font-size: var(--fs-medium);
+    font-weight: bold;
+	padding-top: 5px;
+	padding-left: 10px;
+}
+
+.spot-details-info {
+	display: flex;
+	gap: 1rem;
+	justify-content: space-between;
+}
+
+.spot-description {
+	padding-left: 10px;
+	
+}
+
+.spot-details-owner-description {
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	justify-content: center;
+}
+
+.spot-owner {
+	font-weight: bold;
+	font-size: larger;
+	padding-left: 10px;
+	padding-bottom: 5px;
+}
+
+.booking-spot-div {
+	display: flex;
+	width: 25dvw;
+	flex-direction: column;
+	background-color: white;
+	border: solid 2px black;
+	border-radius: 14px;
+	gap: 1rem;
+	padding: 1rem 2rem;
+	box-shadow: 4px 2px 10px grey;
+	margin-right: 10px;
+}
+
+.price-review-title {
+	display: flex;
+	justify-content: space-between;
+}
+
+.book-price {
+	font-weight: bold;
+}
+
+.booking-button {
+	padding: 0.5rem 4rem;
+	background-color: white;
+	color: black;
+	box-shadow: 4px 2px 10px grey;
+	transition: all 0.3s ease-in-out;
+	cursor: pointer;
+	border-radius: 14px;
+}
+
+.line-break {
+	border: solid 2px black;
+	width: 100%;
+}
+
+.review-word {
+	padding-bottom: 10px;
+}
+
+.review-div {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+
+.review-title {
+	font-size: var(--fs-medium);
+}
+
+.review-user {
+	padding-bottom: 5px;
+}
+
+.review-date {
+	padding-bottom: 5px;
+}
+
+.review-text {
+	padding-bottom: 5px;
+}
+
+.delete-review-button {
+	padding: 0.5rem 4rem;
+	background-color: white;
+	color: black;
+	box-shadow: 4px 2px 10px grey;
+	transition: all 0.3s ease-in-out;
+	cursor: pointer;
+	border-radius: 14px;
+}

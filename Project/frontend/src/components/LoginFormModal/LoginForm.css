@@ -1,0 +1,119 @@
+/* LoginForm.css */
+@import url('../../index.css');
+
+/* Wrapper for the form */
+.login-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 2rem;
+	border-radius: 2px;
+	background-color: #fff;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	width: 300px;
+	margin: auto;
+}
+
+h1 {
+	color: #000;
+	font-size: 1.8rem;
+	margin-bottom: 1.5rem;
+	font-family: var(--ff-headers);
+    padding-bottom: 25px;
+}
+
+/* Form styles */
+.login-form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 125%;
+	gap: 1.5rem;
+    padding-right: 12px;
+    padding-left: 12px;
+}
+
+label {
+	color: #000;
+	font-size: 1rem;
+	font-family: var(--ff-headers); 
+	display: flex;
+	flex-direction: column;
+}
+
+/* Ensure all input fields are of the same width */
+
+
+input {
+	width: 100%; /* Ensures all inputs take up the full width of their container */
+	padding: 0.5rem;
+	border: 2px solid #000;
+	border-radius: 6px;
+	background-color: #fff;
+	color: #000;
+	font-size: 1rem;
+	font-family: var(--ff-headers);
+	transition: all 0.3s ease;
+	box-sizing: border-box;
+}
+
+label {
+	width: 100%; /* Ensures all inputs take up the full width of their container */
+	padding: 0.5rem;
+	background-color: #fff;
+	color: #000;
+	font-size: 1rem;
+	font-family: var(--ff-headers);
+	transition: all 0.3s ease;
+	box-sizing: border-box;
+	padding-bottom: 0px;
+	padding-top: 0px;
+}
+
+/* Input focus effect */
+input:focus {
+	border-color: #000;
+	outline: none;
+	box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Error message styling */
+.error-message {
+	color: red;
+	font-size: 0.9rem;
+	font-family: var(--ff-headers);
+}
+
+/* Button styles */
+.login-button {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 50%;
+	padding: 0.75rem;
+	border: 2px solid #000;
+	border-radius: 6px;
+	background-color: #000;
+	color: #fff;
+	font-size: 1rem;
+	font-family: var(--ff-headers);
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+/* Hover effect for buttons */
+.login-button:hover {
+	background-color: #fff;
+	color: #000;
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Disabled button state */
+.login-button:disabled {
+	background-color: #ccc;
+	color: #666;
+	border-color: black;
+	cursor: not-allowed;
+	box-shadow: none;
+}
