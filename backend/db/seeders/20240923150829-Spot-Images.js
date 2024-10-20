@@ -484,7 +484,7 @@ module.exports = {
         },
         {
           spotId: 19,
-          url: "/Images/House19/dinning room 8.png",
+          url: "/Images/House19/dinning room  8.png", 
           preview: false,
         },
         {
@@ -617,7 +617,7 @@ module.exports = {
             "/Images/House18/office 2.png",
             "/Images/House19/bathroom 16.png",
             "/Images/House19/bedroom 8.png",
-            "/Images/House19/dinning room 8.png",
+            "/Images/House19/dinning room  8.png",
             "/Images/House19/hotub.png",
             "/Images/House19/livingroom 14.png",
             "/Images/House20/bathroom 14.png",
