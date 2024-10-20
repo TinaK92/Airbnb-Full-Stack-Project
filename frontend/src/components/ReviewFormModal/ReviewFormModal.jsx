@@ -3,6 +3,8 @@ import { useDispatch } from "react-redux";
 import { addAReview } from "../../store/reviews.js";
 import { useModal } from "../../context/Modal.jsx";
 import StarRating from "../StarRating/StarRating.jsx";
+import './ReviewFormModal.css'
+
 
 const ReviewFormModal = ({ spotId }) => {
     const dispatch = useDispatch();
@@ -24,11 +26,11 @@ const ReviewFormModal = ({ spotId }) => {
             setErrors(newErrors);
             return;
         }
-        await dispatch(addAReview({ review, stars}, spotId));
+        dispatch(addAReview({ review, stars }, spotId));
         closeModal();
     }
     return (
-        <div>
+        <div className="form">
             <h2 className="review-title-form">How was your stay?</h2>
             <form onSubmit={handleSubmit}>
                 <textarea 
@@ -38,14 +40,25 @@ const ReviewFormModal = ({ spotId }) => {
                     onChange={(e) => setReview(e.target.value)}
                     required
                 />
-                {errors.review && <p className="error-message">{errors.revew}</p>}
+                {errors.review && <p className="error-message">{errors.review}</p>}
                 <label className="stars-label">
                     <StarRating 
                         rating={stars}
                         setRating={setStars}
+                        
                     />
                     <span>Stars</span>
                 </label>
+                {errors.stars && <p className="error-message">{errors.stars}</p>}
+                <div className="button-div">
+                <button 
+                    className="submit-button"
+                    type="submit"
+                    disabled={review.length < 10 || stars < 1}
+                >
+                    Submit Review
+                </button>
+                </div>
             </form>
         </div>
     )

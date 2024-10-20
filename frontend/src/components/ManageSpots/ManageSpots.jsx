@@ -5,7 +5,7 @@ import { getUserSpots, deleteASpot } from "../../store/spots";
 import { useModal } from "../../context/Modal";
 import { FaStar } from "react-icons/fa";
 import ConfirmDeleteModal from "../ConfirmDeleteModal/ConfirmDeleteModal";
-
+import './ManageSpot.css';
 
 const ManageSpots = () => {
     const dispatch = useDispatch();

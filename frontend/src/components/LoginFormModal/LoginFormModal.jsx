@@ -1,7 +1,7 @@
 // frontend/src/components/LoginFormModal/LoginFormModal.jsx
 
 import { useEffect, useState } from "react";
-import * as sessionActions from "../../store/session";
+import * as sessionActions from "../../store/session.js";
 import { useDispatch } from "react-redux";
 import { useModal } from "../../context/Modal.jsx";
 import "./LoginForm.css";
@@ -11,7 +11,7 @@ function LoginFormModal() {
   const [credential, setCredential] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState({});
-  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const { closeModal } = useModal();
 
   useEffect(() => {
@@ -22,12 +22,12 @@ function LoginFormModal() {
     if (password.length < 0) {
       disable.password = `Password must be longer than 6 characters`;
     }
-    setErrors(disable)
-  }, [credential, password])
+    setErrors(disable);
+  }, [credential, password]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setIsSubmitting(true)
+    setIsSubmitting(true);
     setErrors({});
     return dispatch(sessionActions.login({ credential, password }))
       .then(closeModal)
@@ -36,7 +36,7 @@ function LoginFormModal() {
         if (data && data.errors) {
           setErrors(data.errors);
         } else {
-          setErrors({ credential: `The provided credentials were invalid`})
+          setErrors({ credential: `The provided credentials were invalid` });
         }
       });
   };
@@ -47,60 +47,54 @@ function LoginFormModal() {
     setErrors({});
     return dispatch(
       sessionActions.login({ credential: `Demo-lition`, password: `password` })
-    ).then(closeModal)
-  }
+    ).then(closeModal);
+  };
 
   return (
     <div className="login-wrapper">
       <>
-      <h1>Log In</h1>
-      <form 
-        className='login-form' 
-        onSubmit={handleSubmit}
-      >
-        <label>
-          Username or Email
-          <input
-            type="text"
-            value={credential}
-            onChange={(e) => setCredential(e.target.value)}
-            required
-          />
-        </label>
-        {errors.credential && isSubmitting && (
-          <p className="error-message">{errors.credential}</p>
-        )}
-        <label>
-          Password
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-        </label>
-        {errors.password && isSubmitting && (
-           <p className="error-message">{errors.password}</p>
-        )}
-        <button 
-          className="login-button"
-          type="submit"
-          disabled={Object.values(errors).length > 0}
-        >
-          Log In
-        </button>
-        <button 
-          className="login-button"
-          onClick={handleSubmitDemo}
-        >
-          Login as Demo User
-        </button>
-      </form>
-    </>
+        <h1>Log In</h1>
+        <form className="login-form" onSubmit={handleSubmit}>
+          <label>
+            Username or Email
+            <input
+              className="username-box"
+              type="text"
+              value={credential}
+              onChange={(e) => setCredential(e.target.value)}
+              required
+            />
+          </label>
+          {errors.credential && isSubmitting && (
+            <p className="error-message">{errors.credential}</p>
+          )}
+          <label>
+            Password
+            <input
+              className="password-box"
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </label>
+          {errors.password && isSubmitting && (
+            <p className="error-message">{errors.password}</p>
+          )}
+          <button
+            className="login-button"
+            type="submit"
+            disabled={Object.values(errors).length > 0}
+          >
+            Log In
+          </button>
+          <button className="login-button" onClick={handleSubmitDemo}>
+            Login as Demo User
+          </button>
+        </form>
+      </>
     </div>
-  )
+  );
 }
 
 export default LoginFormModal;
-
-

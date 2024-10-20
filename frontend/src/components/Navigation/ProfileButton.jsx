@@ -1,15 +1,15 @@
 // frontend/src/components/Navigation/ProfileButton.jsx
 
-import { useState, useEffect, useRef } from 'react';
-import { useDispatch } from 'react-redux';
-import { FaUserCircle } from 'react-icons/fa';
-import * as sessionActions from '../../store/session';
-import LoginFormModal from '../LoginFormModal/LoginFormModal.jsx';
-import SignupFormModal from '../SignupFormModal/SignupFormModal.jsx';
-import OpenModalMenuItem from './OpenModalMenuItem.jsx';
-import { useNavigate } from 'react-router-dom';
-import '../Navigation/ProfileButton.css';
-import { GiHamburgerMenu } from 'react-icons/gi';
+import { useState, useEffect, useRef } from "react";
+import { useDispatch } from "react-redux";
+import { FaUserCircle } from "react-icons/fa";
+import * as sessionActions from "../../store/session.js";
+import LoginFormModal from "../LoginFormModal/LoginFormModal.jsx";
+import SignupFormModal from "../SignupFormModal/SignupFormModal.jsx";
+import OpenModalMenuItem from "./OpenModalMenuItem.jsx";
+import { useNavigate } from "react-router-dom";
+import "./ProfileButton.css";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 function ProfileButton({ user }) {
   const navigate = useNavigate();
@@ -31,7 +31,7 @@ function ProfileButton({ user }) {
       }
     };
 
-    document.addEventListener('click', closeMenu);
+    document.addEventListener("click", closeMenu);
 
     return () => document.removeEventListener("click", closeMenu);
   }, [showMenu]);
@@ -47,36 +47,27 @@ function ProfileButton({ user }) {
 
   return (
     <>
-      <button 
-        className='profile-button'
-        onClick={toggleMenu}
-      >
-        <GiHamburgerMenu className="menu-button-icon" size={20} />
-        <FaUserCircle className="profile-button-icon"size={18} />
+      <button className="profile-button" onClick={toggleMenu}>
+        <GiHamburgerMenu className="menu-button-icon" size={22} />
+        <FaUserCircle className="profile-button-icon" size={22} />
       </button>
-      <ul 
-        className={ulClassName} 
-        ref={ulRef}
-      >
+      <ul className={ulClassName} ref={ulRef}>
         {user ? (
           <>
             <li>Hello, {user.firstName}</li>
             <li>{user.email}</li>
-            <div className='line-break'></div>
+            <div className="line-break"></div>
             <li>
-              <button 
-                className='logout-button'
+              <button
+                className="logout-button"
                 onClick={() => navigate(`/spots/current`)}
               >
                 Manage Spots
               </button>
             </li>
-            <div className='line-break'></div>
+            <div className="line-break"></div>
             <li>
-              <button
-                className='logout-button'
-                onClick={logout}
-              >
+              <button className="logout-button" onClick={logout}>
                 Log Out
               </button>
             </li>
@@ -84,13 +75,12 @@ function ProfileButton({ user }) {
         ) : (
           <>
             <OpenModalMenuItem
-              itemText='Sign Up'
+              itemText="Sign Up"
               onItemClick={closeMenu}
               modalComponent={<SignupFormModal />}
             />
-            <div className='line-break'></div>
             <OpenModalMenuItem
-              itemText='Log In'
+              itemText="Log In"
               onItemClick={closeMenu}
               modalComponent={<LoginFormModal />}
             />

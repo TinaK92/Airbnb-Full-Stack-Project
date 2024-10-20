@@ -24,7 +24,7 @@ function Navigation({ isLoaded }) {
               to='/'
               className='navigation-logo'
             >
-              <GiBigWave size='2cm' />
+              <GiBigWave size='1cm' />
               DeepBlueBnB
             </NavLink>
           </li>

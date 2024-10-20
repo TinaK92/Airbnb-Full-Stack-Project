@@ -4,7 +4,9 @@ import { getSpotDetails } from "../../store/spots";
 import { useParams } from "react-router-dom";
 import SpotImages from "../SpotImages/SpotImages";
 import Reviews from "../Reviews/Reviews";
-import { FaStar } from "react-icons/fa";
+import { IoStarSharp } from "react-icons/io5";
+import './SpotDetails.css'
+
 
 const SpotDetails = () => {
   const { spotId } = useParams();
@@ -40,7 +42,7 @@ const SpotDetails = () => {
     <div className="spot-details-wrapper">
       <div className="spot-title-header">
         <h1 className="spot-details-title">{spot.name}</h1>
-        <p>
+        <p className="city-state-country">
           {spot.city}, {spot.state}, {spot.country}
         </p>
       </div>
@@ -54,13 +56,11 @@ const SpotDetails = () => {
         </div>
         <div className="booking-spot-div">
           <div className="price-review-title">
-            <p className="book-price">{`${spot.price} night`}</p>
+            <p className="book-price">{`$${spot.price} night`}</p>
             <p className="booking-reviews">
-              <FaStar />
-              {spot.avgRating}
-              {spot.numReviews
-                ? ` · ${spot.numReviews} ${spotDetails.numReviews}`
-                : "New"}
+            <IoStarSharp />
+              {spot.avgStarRating}
+              {spot.numReviews ? ` · ${spot.numReviews} ${spotDetails.numReviews}` : "New"}
             </p>
           </div>
           <button onClick={handleClick} className="booking-button">
@@ -72,10 +72,10 @@ const SpotDetails = () => {
       <div className="review-div">
         <div className="review-heading">
           <p className="review-title">
-            <FaStar />
-            {spot.avgRating}{" "}
+          <IoStarSharp />
+            {spot.avgStarRating}{" "}
             {spot.numReviews
-              ? `· ${spot.numReviews} ${spot.numReviews}`
+              ? `· ${spot.numReviews} Reviews`
               : "New"}
           </p>
         </div>

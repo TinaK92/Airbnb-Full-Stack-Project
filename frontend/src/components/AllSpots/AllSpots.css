@@ -16,7 +16,7 @@
 
 .spots-wrapper {
     display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: auto;
 	box-sizing: border-box;
 	justify-items: center;
@@ -27,6 +27,7 @@
 	padding: 1rem;
 }
 
+/* text */
 .spot-div {
     width: 100%;
     max-width: 300px;
@@ -34,33 +35,42 @@
     position: relative;
     cursor: pointer;
     gap: 1rem;
+    color: white;
+    font-size: 150%;
 }
 
 .spot-star {
     display: flex;
     justify-content: space-between;
+    color: black;
 }
 
 .spot-city-state {
     font-weight: 300;
+    color: black;
 }
 
 .spot-rating {
     display: flex;
     gap: 0.5rem;
+    color: black;
 }
 
 .spot-image {
     width: 100%;
     border-radius: 14px;
+    color: white;
+    font-size: 150%;
 }
 
 .spot-price {
     font-weight: 500;
+    color: black;
 }
 
 .spot-name {
     font-weight: bold;
+    font-size: 150%;
 }
 
 #tooltip {
@@ -69,4 +79,23 @@
     z-index: 100;
     top: 10px;
     left: 10px;
+}
+
+/* Responsive layout */
+@media (max-width: 1200px) {
+    .spots-wrapper {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for smaller screens */
+    }
+}
+
+@media (max-width: 900px) {
+    .spots-wrapper {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .spots-wrapper {
+        grid-template-columns: 1fr; /* 1 column for the smallest screens */
+    }
 }

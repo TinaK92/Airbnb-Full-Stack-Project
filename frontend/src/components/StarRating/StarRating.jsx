@@ -1,33 +1,25 @@
 import { useState } from "react";
-import { FaStar } from "react-icons/fa";
+import './StarRating.css';
 
 const StarRating = ({ rating, setRating }) => {
     const [hover, setHover] = useState(0);
+    const stars = [1, 2, 3, 4, 5];
 
     return (
         <div className="star-rating">
-            {[...Array(5).map((star, index) => {
-                const ratingVal = index + 1;
-                return (
-                    <label key={index}>
-                        <input 
-                            type="radio"
-                            name="rating"
-                            value={ratingVal}
-                            onClick={() => setRating(ratingVal)}
-                        />
-                        <FaStar
-                            className="star"
-                            size={30}
-                            onMouseEnter={setHover(ratingVal)}
-                            color={ratingVal <= (hover || rating) ? '#ffc107' : '#e4e5e9'}
-                            onMouseLeave={() => setHover(0)}
-                        />
-                    </label>
-                )
-            })]}
+            {stars.map((star) => (
+                <span
+                    key={star}
+                    className={`star ${hover >= star || rating >= star ? 'filled' : ''}`}
+                    onClick={() => setRating(star)} // Set the selected rating
+                    onMouseEnter={() => setHover(star)} // Highlight stars on hover
+                    onMouseLeave={() => setHover(0)} // Reset highlight when no longer hovering
+                >
+                    ★
+                </span>
+            ))}
         </div>
-    )
-}
+    );
+};
 
 export default StarRating;

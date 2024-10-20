@@ -1,4 +1,4 @@
-
+import './ConfirmDeleteModal.css'
 
 
 const ConfirmDeleteModal = ({ onConfirm, onCancel }) => {

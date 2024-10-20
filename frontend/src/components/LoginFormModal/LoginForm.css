@@ -8,10 +8,10 @@
 	align-items: center;
 	flex-direction: column;
 	padding: 2rem;
-	border-radius: 10px;
+	border-radius: 2px;
 	background-color: #fff;
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-	width: 400px;
+	width: 300px;
 	margin: auto;
 }
 
@@ -27,6 +27,7 @@ h1 {
 .login-form {
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 	width: 125%;
 	gap: 1.5rem;
     padding-right: 12px;
@@ -37,12 +38,16 @@ label {
 	color: #000;
 	font-size: 1rem;
 	font-family: var(--ff-headers); 
+	display: flex;
+	flex-direction: column;
 }
 
 /* Ensure all input fields are of the same width */
+
+
 input {
-	width: 70%; /* Ensures all inputs take up the full width of their container */
-	padding: 0.75rem;
+	width: 100%; /* Ensures all inputs take up the full width of their container */
+	padding: 0.5rem;
 	border: 2px solid #000;
 	border-radius: 6px;
 	background-color: #fff;
@@ -50,7 +55,20 @@ input {
 	font-size: 1rem;
 	font-family: var(--ff-headers);
 	transition: all 0.3s ease;
-	box-sizing: border-box; /* Ensures padding and border are included in width calculation */
+	box-sizing: border-box;
+}
+
+label {
+	width: 100%; /* Ensures all inputs take up the full width of their container */
+	padding: 0.5rem;
+	background-color: #fff;
+	color: #000;
+	font-size: 1rem;
+	font-family: var(--ff-headers);
+	transition: all 0.3s ease;
+	box-sizing: border-box;
+	padding-bottom: 0px;
+	padding-top: 0px;
 }
 
 /* Input focus effect */
@@ -69,7 +87,10 @@ input:focus {
 
 /* Button styles */
 .login-button {
-	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 50%;
 	padding: 0.75rem;
 	border: 2px solid #000;
 	border-radius: 6px;
@@ -92,7 +113,7 @@ input:focus {
 .login-button:disabled {
 	background-color: #ccc;
 	color: #666;
-	border-color: #ccc;
+	border-color: black;
 	cursor: not-allowed;
 	box-shadow: none;
 }

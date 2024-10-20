@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getAllSpots } from "../../store/spots";
 import { useNavigate } from "react-router-dom";
 import './AllSpots.css';
-import { FaStar } from "react-icons/fa";
+import { IoStarSharp } from "react-icons/io5";
 
 
 
@@ -28,7 +28,9 @@ function AllSpots() {
         <div className="spots-component">
             <div >
                 <div className="spots-wrapper">
-                    {allSpots && allSpots.map((spot) => (
+                    {allSpots && allSpots
+                        .sort((a, b) => b.id - a.id)
+                        .map((spot) => (
                         <div 
                             key={spot.id}
                             className="spot-div" 
@@ -49,7 +51,7 @@ function AllSpots() {
                                     {spot.city}, {spot.state}
                                 </p>
                                 <p className="spot-rating">
-                                    <FaStar />
+                                <IoStarSharp />
                                     {spot.avgRating ? spot.avgRating : "new"}
                                 </p>
                             </div>
