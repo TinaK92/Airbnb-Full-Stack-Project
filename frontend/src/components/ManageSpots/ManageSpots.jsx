@@ -62,7 +62,7 @@ const ManageSpots = () => {
                         className='create-newspot-btn'
                         onClick={() => navigate('/spots/new')}
                     >
-                        Create a new spot
+                        Create a New Spot
                     </button>
                 </div>
                 <div className='mspot-list'>

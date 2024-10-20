@@ -55,7 +55,7 @@ function AllSpots() {
                                     {spot.avgRating ? spot.avgRating : "new"}
                                 </p>
                             </div>
-                            <p className="spot-price">{`$${spot.price}`}</p>
+                            <p className="spot-price">{`$${spot.price} night`}</p>
                         </div>
                     ))}
                 </div>

@@ -1,9 +1,9 @@
 // frontend/src/components/SignupFormPage/SignupFormPage.jsx
-import { useEffect, useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { useModal } from '../../context/Modal';
-import * as sessionActions from '../../store/session';
-import './SignupForm.css';
+import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { useModal } from "../../context/Modal";
+import * as sessionActions from "../../store/session";
+import "./SignupForm.css";
 
 function SignupFormModal() {
   const dispatch = useDispatch();
@@ -20,31 +20,31 @@ function SignupFormModal() {
   useEffect(() => {
     const disabled = {};
     if (
-      !email && 
+      !email &&
       !username &&
       !firstName &&
       !lastName &&
       !password &&
       !confirmPassword
     ) {
-      disabled.form = 'Please fill out the sign-up form';
+      disabled.form = "Please fill out the sign-up form";
     }
     if (username.length < 4) {
-      disabled.username = 'Username must be longer than 4 characters';
+      disabled.username = "Username must be longer than 4 characters";
     }
     if (password.length < 6) {
-      disabled.password = 'Password must be longer than 6 characters';
+      disabled.password = "Password must be longer than 6 characters";
     }
     if (!confirmPassword) {
       disabled.confirmPassword =
-        'Password and confirm-password must not be empty';
+        "Password and confirm-password must not be empty";
     }
     setErrors(disabled);
-  }, [email, username, firstName, lastName, password, confirmPassword])
+  }, [email, username, firstName, lastName, password, confirmPassword]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setHasSubmitted(true)
+    setHasSubmitted(true);
     if (password === confirmPassword) {
       setErrors({});
       return dispatch(
@@ -53,7 +53,7 @@ function SignupFormModal() {
           username,
           firstName,
           lastName,
-          password
+          password,
         })
       )
         .then(closeModal)
@@ -65,16 +65,15 @@ function SignupFormModal() {
         });
     }
     return setErrors({
-      confirmPassword: "Confirm Password field must be the same as the Password field"
+      confirmPassword:
+        "Confirm Password field must be the same as the Password field",
     });
   };
 
   return (
-    <div className='signup-wrapper'>
-      <h1 className='title'>Sign Up</h1>
-      <form 
-        className='signup-form'
-        onSubmit={handleSubmit}>
+    <div className="signup-wrapper">
+      <h1 className="title">Sign Up</h1>
+      <form className="signup-form" onSubmit={handleSubmit}>
         <label>
           Email
           <input
@@ -137,9 +136,9 @@ function SignupFormModal() {
         {errors.confirmPassword && hasSubmitted && (
           <p>{errors.confirmPassword}</p>
         )}
-        <button 
+        <button
           type="submit"
-          className='signup-button'
+          className="signup-button"
           disabled={Object.values(errors).length > 0}
         >
           Sign Up

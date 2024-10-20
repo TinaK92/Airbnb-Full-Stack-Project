@@ -54,18 +54,14 @@ function ProfileButton({ user }) {
       <ul className={ulClassName} ref={ulRef}>
         {user ? (
           <>
-            <li>Hello, {user.firstName}</li>
-            <li>{user.email}</li>
-            <div className="line-break"></div>
-            <li>
-              <button
-                className="logout-button"
+            <li className="hello-user">Hello, {user.firstName}</li>
+            <li className="user-email">{user.email}</li>
+            <li
+                className="manage-spot-button"
                 onClick={() => navigate(`/spots/current`)}
               >
                 Manage Spots
-              </button>
             </li>
-            <div className="line-break"></div>
             <li>
               <button className="logout-button" onClick={logout}>
                 Log Out
