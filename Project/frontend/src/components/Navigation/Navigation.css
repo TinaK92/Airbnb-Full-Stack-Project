@@ -9,9 +9,9 @@
 }
 
 .nav-logo {
+    color: black;
     display: flex;
     align-items: center;
-    color: black;
     font-family: var(--ff-headers);
     font-size: var(--fs-medium);
     font-weight: 600;
@@ -39,6 +39,8 @@
 .navigation-logo {
 	transition: all 0.2s ease-in-out;
     margin-left: 0px;
+    color: black;
+    text-decoration: none;
     
 }
 

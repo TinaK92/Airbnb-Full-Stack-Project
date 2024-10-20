@@ -4,18 +4,18 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    padding: 0 1rem,
+    padding: 0 1rem;
+	margin-left: 10px;
+	margin-right: 10px;
 }
 
-.city-state-country {
-	padding-left: 10px;
-}
+
 
 .spot-details-title {
     font-size: var(--fs-medium);
     font-weight: bold;
 	padding-top: 5px;
-	padding-left: 10px;
+	
 }
 
 .spot-details-info {
@@ -24,10 +24,7 @@
 	justify-content: space-between;
 }
 
-.spot-description {
-	padding-left: 10px;
-	
-}
+
 
 .spot-details-owner-description {
 	display: flex;
@@ -39,7 +36,7 @@
 .spot-owner {
 	font-weight: bold;
 	font-size: larger;
-	padding-left: 10px;
+
 	padding-bottom: 5px;
 }
 
@@ -97,6 +94,8 @@
 
 .review-user {
 	padding-bottom: 5px;
+	text-decoration: underline;
+	text-shadow: 2px 2px 5px grey;
 }
 
 .review-date {
@@ -112,6 +111,25 @@
 	background-color: white;
 	color: black;
 	box-shadow: 4px 2px 10px grey;
+	transition: all 0.3s ease-in-out;
+	cursor: pointer;
+	border-radius: 14px;
+}
+
+.add-review-button {
+	padding: 0.5rem 4rem;
+	background-color: white;
+	color: black;
+	box-shadow: 4px 2px 10px grey;
+	transition: all 0.3s ease-in-out;
+	cursor: pointer;
+	border-radius: 14px;
+}
+
+.post-review {
+	padding-bottom: 15px;
+	background-color: white;
+	color: black;
 	transition: all 0.3s ease-in-out;
 	cursor: pointer;
 	border-radius: 14px;

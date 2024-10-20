@@ -71,7 +71,6 @@ const SpotDetails = () => {
       <div className="line-break"></div>
       <div className="review-div">
         <div className="review-heading">
-          <h3 className="review-word">Reviews</h3>
           <p className="review-title">
           <IoStarSharp />
             {spot.avgStarRating}{" "}

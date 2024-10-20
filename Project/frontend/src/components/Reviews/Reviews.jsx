@@ -1,9 +1,11 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useModal } from "../../context/Modal";
-import ConfirmDeleteModal from "../ConfirmDeleteModal/ConfirmDeleteModal";
+import ConfirmDeleteReview from "../ConfirmDeleteReview/ConfirmDeleteReview";
 import ReviewFormModal from "../ReviewFormModal/ReviewFormModal";
 import { deleteAReview, getAllReviews } from "../../store/reviews";
+import './Reviews.css';
+
 
 const Reviews = ({ spotId }) => {
   const dispatch = useDispatch();
@@ -20,37 +22,43 @@ const Reviews = ({ spotId }) => {
   }, [dispatch, spotId]);
 
   const dateForm = (date) => {
-    const monthArr = [
-      "January",
-      "February",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July",
-      "August",
-      "September",
-      "October",
-      "November",
-      "December",
-    ];
-    const splitDate = date.split("-");
-    const monthIndex = parseInt(splitDate[1], 10) - 1;
-    return `${monthArr[monthIndex]}-${splitDate[0]}`;
+    if (date) {
+      const monthArr = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+      ];
+      const splitDate = date.split("-");
+      const monthIndex = parseInt(splitDate[1], 10) - 1;
+      return `${monthArr[monthIndex]}-${splitDate[0]}`;
+    }
   };
 
   const handleDelete = (reviewId) => {
     setModalContent(
-      <ConfirmDeleteModal
+      <ConfirmDeleteReview
         onConfirm={() => {
           dispatch(deleteAReview(reviewId)).then(() => {
             closeModal();
           });
         }}
-        onCancel={closeModal}
+        onCancel={() => {
+          closeModal();
+
+        }}
       />
     );
   };
+
   return (
     <div className="review-wrapper">
       {sessionUser &&
@@ -70,16 +78,16 @@ const Reviews = ({ spotId }) => {
         )}
       {reviews.length > 0 ? (
         reviews
-          .sort((a, b) => new Date(b.createAt) - new Date(a.createdAt))
+          .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
           .map((review) => (
             <div key={review.id} className="review-container">
-              <h3 className="review-user">{review.user ? review.user.firstName : 'Unknown User'}</h3>
+              <h3 className="review-user">{review.User?.firstName}</h3>
               <p className="review-date">{dateForm(review.createdAt)}</p>
-              <p className="review-text">{review.review}</p>
+              <p className="actual-review">{review.review}</p>
               {sessionUser && sessionUser.id === review.userId && (
                 <button
                   onClick={() => handleDelete(review.id)}
-                  className="delete-review-button"
+                  className="delete-review-btn"
                 >
                   Delete Review
                 </button>

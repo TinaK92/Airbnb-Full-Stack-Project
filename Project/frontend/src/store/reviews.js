@@ -80,7 +80,9 @@ const reviewReducer = (state = initialState, action) => {
             return {
                 ...state, 
                 reviews: state.reviews.filter(
-                    (review) => review.id !== action.reviewId
+                    (review) => {
+                         return review.id !== action.reviewId
+                    }
                 ),
             }
         }
