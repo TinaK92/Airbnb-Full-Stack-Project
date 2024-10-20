@@ -24,7 +24,7 @@ export const addReview = (review) => {
 // Delete a Review
 export const deleteReview = (reviewId) => {
     return {
-        type: ADD_REVIEW,
+        type: DELETE_REVIEW,
         reviewId,
     }
 };
