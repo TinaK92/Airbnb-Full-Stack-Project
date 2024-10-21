@@ -149,7 +149,8 @@ export const updateASpot = (spotId, spotInfo) => async (dispatch) => {
     dispatch(updateSpot(updatedSpot));
     return updatedSpot;
   } else if (!response.ok) {
-    console.log("some error happened");
+    
+    return response;
   }
 };
 

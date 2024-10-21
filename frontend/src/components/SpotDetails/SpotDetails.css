@@ -15,6 +15,7 @@
     font-size: var(--fs-medium);
     font-weight: bold;
 	padding-top: 5px;
+	display: flex;
 	
 }
 

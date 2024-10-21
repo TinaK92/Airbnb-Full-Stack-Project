@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { getUserSpots, deleteASpot } from "../../store/spots";
 import { useModal } from "../../context/Modal";
-import { FaStar } from "react-icons/fa";
+import { IoStarSharp } from "react-icons/io5";
 import ConfirmDeleteModal from "../ConfirmDeleteModal/ConfirmDeleteModal";
 import './ManageSpot.css';
 
@@ -55,17 +55,17 @@ const ManageSpots = () => {
             )
         }
         return (
-            <div className='mspot-wrapper'>
-                <div className='mspot-heading'>
-                    <h2 className='mspot-title'>Manage Spots</h2>
-                    <button
+            <div className='manage-spot-wrapper'>
+                <div className='manage-spot-heading'>
+                    <h2 className='manage-spot-title'>Manage Spots</h2>
+                    {/* <button
                         className='create-newspot-btn'
                         onClick={() => navigate('/spots/new')}
                     >
                         Create a New Spot
-                    </button>
+                    </button> */}
                 </div>
-                <div className='mspot-list'>
+                <div className='manage-spot-list'>
                     {userSpots.map((spot) => (
                         <div
                             onMouseOut={() => setToolTip(null)}
@@ -78,22 +78,22 @@ const ManageSpots = () => {
                             <img
                                 src={spot.previewImage}
                                 alt={spot.name}
-                                className='mspot-thumbnail'
+                                className='manage-spot-thumbnail'
                             />
-                            <div className='mspot-info'>
-                                <div className='mspot-info-sub'>
-                                    <p className='mspot-location'>
+                            <div className='manage-spot-info'>
+                                <div className='manage-spot-info-sub'>
+                                    <p className='manage-spot-location'>
                                         {spot.city}, {spot.state}
                                     </p>
-                                    <p className='mspot-rating'>
-                                        <FaStar />
+                                    <p className='manage-spot-rating'>
+                                        <IoStarSharp />
                                         {spot.avgRating ? spot.avgRating : 'New'}
                                     </p>
                                 </div>
-                                <p className='mspot-price'>${spot.price} night</p>
+                                <p className='manage-spot-price'>${spot.price} night</p>
                                 <div className='mspot-actions'>
                                     <button
-                                        className='mspot-use-btn'
+                                        className='manage-spot-use-btn'
                                         onClick={(e) => {
                                             e.stopPropagation();
                                             navigate(`/spots/${spot.id}/edit`);
@@ -102,7 +102,7 @@ const ManageSpots = () => {
                                         Update
                                     </button>
                                     <button
-                                        className='mspot-use-btn'
+                                        className='manage-spot-use-btn'
                                         onClick={(e) => {
                                             e.stopPropagation();
                                             handleDelete(spot.id);
