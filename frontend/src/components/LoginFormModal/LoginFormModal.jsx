@@ -19,7 +19,7 @@ function LoginFormModal() {
     if (credential.length < 4) {
       disable.credential = `Username must be longer than 4 characters`;
     }
-    if (password.length < 0) {
+    if (password.length < 6) {
       disable.password = `Password must be longer than 6 characters`;
     }
     setErrors(disable);

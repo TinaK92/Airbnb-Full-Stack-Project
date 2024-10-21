@@ -11,9 +11,9 @@ const StarRating = ({ rating, setRating }) => {
                 <span
                     key={star}
                     className={`star ${hover >= star || rating >= star ? 'filled' : ''}`}
-                    onClick={() => setRating(star)} // Set the selected rating
-                    onMouseEnter={() => setHover(star)} // Highlight stars on hover
-                    onMouseLeave={() => setHover(0)} // Reset highlight when no longer hovering
+                    onClick={() => setRating(star)} // 
+                    onMouseEnter={() => setHover(star)} // 
+                    onMouseLeave={() => setHover(0)} // 
                 >
                     ★
                 </span>

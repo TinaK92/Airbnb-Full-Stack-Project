@@ -82,7 +82,7 @@ export const NewSpot = () => {
           <h2>Create a New Spot</h2>
           <h3>Where&apos;s your place located?</h3>
           <p>
-            Guests will only get your address once they&apos;ve booked a
+            Guests will only get your exact address once they&apos;ve booked a
             reservation.
           </p>
         </div>
@@ -164,7 +164,7 @@ export const NewSpot = () => {
           <div className="form-headers">
             <h3>Create a title for your spot</h3>
             <p>
-              Catch guest&apos; attention with a spot title that highlights what
+              Catch guests&apos; attention with a spot title that highlights what
               makes your place special.
             </p>
           </div>
@@ -208,7 +208,7 @@ export const NewSpot = () => {
         <div className="image-inputs-container">
           <div className="form-headers">
             <h3>Liven up your spot with photos</h3>
-            <p>Submit a link to at least one photo to publish your spot</p>
+            <p>Submit a link to at least one photo to publish your spot.</p>
           </div>
           <input
             placeholder="Image URL"

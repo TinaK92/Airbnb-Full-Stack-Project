@@ -56,7 +56,7 @@ const ReviewFormModal = ({ spotId }) => {
                     type="submit"
                     disabled={review.length < 10 || stars < 1}
                 >
-                    Submit Review
+                    Submit Your Review
                 </button>
                 </div>
             </form>

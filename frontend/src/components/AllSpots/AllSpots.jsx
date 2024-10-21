@@ -52,7 +52,7 @@ function AllSpots() {
                                 </p>
                                 <p className="spot-rating">
                                 <IoStarSharp />
-                                    {spot.avgRating ? spot.avgRating : "new"}
+                                    {spot.avgRating ? spot.avgRating.toFixed(1) : "New"}
                                 </p>
                             </div>
                             <p className="spot-price">{`$${spot.price} night`}</p>

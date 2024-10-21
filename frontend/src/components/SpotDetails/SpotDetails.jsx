@@ -37,7 +37,7 @@ const SpotDetails = () => {
   const handleClick = () => {
     alert("Feature coming soon");
   };
-
+  console.log(spot, typeof(spot))
   return (
     <div className="spot-details-wrapper">
       <div className="spot-title-header">
@@ -59,8 +59,9 @@ const SpotDetails = () => {
             <p className="book-price">{`$${spot.price} night`}</p>
             <p className="booking-reviews">
             <IoStarSharp />
-              {spot.avgStarRating}
-              {spot.numReviews ? ` · ${spot.numReviews} ${spotDetails.numReviews}` : "New"}
+              {spot.numReviews 
+                ? ` ${spot.avgStarRating.toFixed(1)} · ${spot.numReviews} ${spotDetails.numReviews}` 
+                : "New"}
             </p>
           </div>
           <button onClick={handleClick} className="booking-button">
@@ -73,9 +74,9 @@ const SpotDetails = () => {
         <div className="review-heading">
           <p className="review-title">
           <IoStarSharp />
-            {spot.avgStarRating}{" "}
+            
             {spot.numReviews
-              ? `· ${spot.numReviews} Reviews`
+              ? ` ${spot.avgStarRating.toFixed(1)} · ${spot.numReviews} ${spotDetails.numReviews}`
               : "New"}
           </p>
         </div>

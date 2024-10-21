@@ -41,6 +41,8 @@ function ProfileButton({ user }) {
   const logout = (e) => {
     e.preventDefault();
     dispatch(sessionActions.logout());
+    closeMenu();
+    navigate('/');
   };
 
   const ulClassName = "profile-dropdown" + (showMenu ? "" : " hidden");
@@ -63,7 +65,10 @@ function ProfileButton({ user }) {
                 Manage Spots
             </li>
             <li>
-              <button className="logout-button" onClick={logout}>
+              <button 
+                className="logout-button" 
+                onClick={logout}
+              >
                 Log Out
               </button>
             </li>
