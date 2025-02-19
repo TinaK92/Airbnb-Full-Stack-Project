@@ -1,0 +1,106 @@
+@import url('../../index.css');
+
+.spots-component {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 2rem 0;
+}
+
+.spots-component.selected {
+    align-items: center;
+}
+
+
+.spots-wrapper {
+    display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: auto;
+	box-sizing: border-box;
+	justify-items: center;
+	gap: 1.5rem;
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 1rem;
+}
+
+/* text */
+.spot-div {
+    width: 100%;
+    max-width: 300px;
+    box-sizing: border-box;
+    position: relative;
+    cursor: pointer;
+    gap: 1rem;
+    color: white;
+    font-size: 150%;
+}
+
+.spot-star {
+    display: flex;
+    justify-content: space-between;
+    color: black;
+}
+
+.spot-city-state {
+    font-weight: 300;
+    color: black;
+    padding-bottom: 5px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.spot-rating {
+    display: flex;
+    gap: 0.5rem;
+    color: black;
+}
+
+.spot-image {
+    width: 100%;
+    border-radius: 14px;
+    color: white;
+    font-size: 150%;
+}
+
+.spot-price {
+    font-weight: 500;
+    color: black;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.spot-name {
+    font-weight: bold;
+    font-size: 150%;
+}
+
+#tooltip {
+    font-family: var(--ff-headers);
+    position: absolute;
+    z-index: 100;
+    top: 10px;
+    left: 10px;
+}
+
+/* Responsive layout */
+@media (max-width: 1200px) {
+    .spots-wrapper {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for smaller screens */
+    }
+}
+
+@media (max-width: 900px) {
+    .spots-wrapper {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .spots-wrapper {
+        grid-template-columns: 1fr; /* 1 column for the smallest screens */
+    }
+}
+

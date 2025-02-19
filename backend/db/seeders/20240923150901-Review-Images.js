@@ -85,8 +85,6 @@ module.exports = {
         ReviewImage.destroy({
           where: {
             reviewId: reviewImage.reviewId,
-            // url: image.url,
-            // preview: image.preview || false
           }
         });
       }
